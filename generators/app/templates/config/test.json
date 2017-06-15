@@ -1,0 +1,18 @@
+{
+  "SampleApp": {
+    "dbConfig": {
+      "driver": "mysql",
+      "database": "SampleV1_test",
+      "username": "user",
+      "password": "pass",
+      "host": "127.0.0.1",
+      "port": "3306"
+    },
+    "https":{
+      "cert" : "./config/cloudflare/file.crt",
+      "key" : "./config/cloudflare/file.pem"
+    },
+    "uploadPath" : "/test-upload/",
+    "sendEmails" : true
+  }
+}

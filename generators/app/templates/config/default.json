@@ -1,0 +1,21 @@
+{
+  "SampleApp": {
+    "dbConfig": {
+      "database": "SampleV1",
+      "host": "127.0.0.1",
+      "port": "3306"
+    },
+    "tokenSecret" : "ILoveCode",
+    "mailgun": {
+      "api_key": "key-xxxxxxxxxxxxx",
+      "domain": "mg.xxxx.xx",
+      "from" : "SampleApp <support@xxxx.xx>"
+    },
+    "slack" : {
+      "url" : "https://hooks.slack.com/services/xxxxxxx/tyyuiuiiiii"
+    },
+    "uniqueId" :{
+      "allowed_characters" : "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ$@"
+    }
+  }
+}
