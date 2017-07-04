@@ -1,12 +1,12 @@
 {
   "name": "generator-express-api-stub",
-  "version": "0.0.0",
-  "description": "Express Based API Stub",
+  "version": "0.1.0",
+  "description": "Express Based API Stub with all the modules configured (MySQL, Mongo, Sequelize, Routes, Controllers, Models, DAO)",
   "homepage": "",
   "author": {
     "name": "Siddharth Srivastava",
     "email": "vish.sid73@gmail.com",
-    "url": ""
+    "url": "https://github.com/vishsid73/generator-express-api-stub"
   },
   "files": [
     "generators"
