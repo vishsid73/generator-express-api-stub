@@ -10,6 +10,12 @@ npm install -g yo
 npm install -g generator-express-api-stub
 ```
 
+To Update the already installed generator
+
+```bash
+npm update generator-express-api-stub -g
+```
+
 Then generate your new project:
 
 ```bash
