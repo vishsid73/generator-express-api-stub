@@ -1,6 +1,6 @@
 {
   "name": "generator-express-api-stub",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Express Based API Stub with all the modules configured (MySQL, Mongo, Sequelize, Routes, Controllers, Models, DAO)",
   "homepage": "",
   "author": {
