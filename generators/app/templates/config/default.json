@@ -1,10 +1,12 @@
 {
   "SampleApp": {
     "dbConfig": {
-      "mysql" : false,
-      "database": "SampleV1",
-      "host": "127.0.0.1",
-      "port": "3306"
+      "mysql" : {
+        "active" : false,
+        "database": "SampleV1",
+        "host": "127.0.0.1",
+        "port": "3306"
+      }
     },
     "tokenSecret" : "ILoveCode",
     "mailgun": {

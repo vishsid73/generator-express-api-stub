@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jwt    = require('jsonwebtoken');
 var multer    = require('multer');
-var log_dao = require('./dao/log');
+var log_dao = require('./dao/log.dao');
 
 var app = express();
 app.use(function(req, res, next) {
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 var router = require('./router')(app);
 app.use('/apidoc', express.static(path.join(__dirname, '../apidocs')));
-console.log("url for api docs: https://host:port/apidoc eg. https://localhost:3000/apidoc");
+console.log("url for api docs: https://host:port/apidoc eg. https://localhost:port/apidoc");
 
 
 // catch 404 and forward to error handler

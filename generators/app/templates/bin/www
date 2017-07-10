@@ -14,12 +14,15 @@ var models = require("../models");
 
 var dbconfig = config.get('SampleApp.dbConfig');
 var sslConfig = config.get('SampleApp.https');
-var sslConfig_options = {
-  key: fs.readFileSync(sslConfig.key),
-  cert: fs.readFileSync(sslConfig.cert),
-  requestCert: false,
-  rejectUnauthorized: false
-};
+var sslConfig_options;
+if(sslConfig.active){
+  sslConfig_options = {
+    key: fs.readFileSync(sslConfig.key),
+    cert: fs.readFileSync(sslConfig.cert),
+    requestCert: false,
+    rejectUnauthorized: false
+  };
+}
 
 /**
  * Get port from environment and store in Express.
@@ -53,7 +56,7 @@ var server = https.createServer(sslConfig_options, app);
  * Listen on provided port, on all network interfaces.
  */
 
-if(dbconfig.mysql == true){
+if(dbconfig.mysql.active == true){
   models.sequelize.sync().then(function () {
     server.listen(port);
     server.on('error', onError);

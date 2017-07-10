@@ -1,14 +1,18 @@
 {
   "SampleApp": {
     "dbConfig": {
-      "driver": "mysql",
-      "database": "SampleV1_prod",
-      "username": "user",
-      "password": "pass",
-      "host": "127.0.0.1",
-      "port": "3306"
+      "mysql" : {
+        "active" : false,
+        "driver": "mysql",
+        "database": "SampleV1_prod",
+        "username": "user",
+        "password": "pass",
+        "host": "127.0.0.1",
+        "port": "3306"
+      }
     },
     "https":{
+      "active" : false,
       "cert" : "./config/cloudflare/file.crt",
       "key" : "./config/cloudflare/file.pem"
     },
