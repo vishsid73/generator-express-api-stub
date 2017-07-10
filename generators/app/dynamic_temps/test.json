@@ -14,7 +14,8 @@
     "rabbit":{
       "url" : "128.199.135.38",
       "user" : "test",
-      "password": "test"
+      "password": "test",
+      "exchange": "tripin_exchange"
     },
     "https":{
       "active" : false,
