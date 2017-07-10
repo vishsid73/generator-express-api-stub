@@ -1,0 +1,56 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "private": true,
+  "apidoc": {
+    "title": "Sample API Doc",
+    "url": "/api",
+    "sampleUrl": "https://localhost:3000/api"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production nodemon --harmony ./bin/www",
+    "startdebug": "NODE_ENV=production nodemon --debug --harmony ./bin/www",
+    "test": "NODE_ENV=development nodemon --harmony ./bin/www",
+    "debug": "NODE_ENV=development nodemon --debug --harmony ./bin/www",
+    "testdebug": "NODE_ENV=test nodemon --debug --harmony ./bin/www",
+    "testdev": "NODE_ENV=test nodemon --harmony ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "body-parser": "~1.13.2",
+    "config": "^1.21.0",
+    "cookie-parser": "~1.3.5",
+    "crypto": "0.0.3",
+    "debug": "~2.2.0",
+    "docxtemplater": "^2.1.5",
+    "express": "~4.13.1",
+    "fullcontact": "^1.0.0",
+    "ical-generator": "^0.2.9",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^7.0.0",
+    "mailgun-js": "^0.7.11",
+    "moment": "^2.13.0",
+    "mongoose": "^4.6.1",
+    "morgan": "~1.6.1",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.2",
+    "node-excel-export": "^1.2.0",
+    "node-schedule": "^1.2.0",
+    "pdfkit": "^0.7.2",
+    "q": "^1.4.1",
+    "request": "^2.72.0",
+    "sequelize": "^3.23.3",
+    "serve-favicon": "~2.3.0",
+    "shortid": "^2.2.8",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-apidoc": "^0.11.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-develop": "^0.4.0",
+    "load-grunt-tasks": "^3.5.0",
+    "time-grunt": "^1.3.0"
+  }
+}
