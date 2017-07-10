@@ -16,7 +16,7 @@ var jwt    = require('jsonwebtoken');
 var crypto = require('crypto');
 
 var config    = require('config');  // we use node-config to handle environments
-var tokenSecret = config.get('SampleApp.tokenSecret');
+var tokenSecret = config.get('<%= name %>.tokenSecret');
 
 
 module.exports = {

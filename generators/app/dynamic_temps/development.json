@@ -1,10 +1,10 @@
 {
-  "SampleApp": {
+  "<%= name %>": {
     "dbConfig": {
       "mysql" : {
         "active" : false,
         "driver": "mysql",
-        "database": "SampleV1_test",
+        "database": "<%= name %>V1_dev",
         "username": "user",
         "password": "pass",
         "host": "127.0.0.1",
@@ -16,7 +16,7 @@
       "cert" : "./config/cloudflare/file.crt",
       "key" : "./config/cloudflare/file.pem"
     },
-    "uploadPath" : "/test-upload/",
+    "uploadPath" : "/dev-upload/",
     "sendEmails" : true
   }
 }

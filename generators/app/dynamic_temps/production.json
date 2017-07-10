@@ -1,10 +1,10 @@
 {
-  "SampleApp": {
+  "<%= name %>": {
     "dbConfig": {
       "mysql" : {
         "active" : false,
         "driver": "mysql",
-        "database": "SampleV1_prod",
+        "database": "<%= name %>V1_prod",
         "username": "user",
         "password": "pass",
         "host": "127.0.0.1",

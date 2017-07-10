@@ -3,7 +3,7 @@ var path      = require("path");
 var Sequelize = require('sequelize');
 var config    = require('config');  // we use node-config to handle environments
 
-var dbConfig = config.get('SampleApp.dbConfig');
+var dbConfig = config.get('<%= name %>.dbConfig');
 
 var db        = {};
 if(dbConfig.mysql.active){

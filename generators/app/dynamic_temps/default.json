@@ -1,5 +1,5 @@
 {
-  "SampleApp": {
+  "<%= name %>": {
     "dbConfig": {
       "mysql" : {
         "active" : false,

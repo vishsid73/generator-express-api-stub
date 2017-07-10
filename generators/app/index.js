@@ -35,6 +35,52 @@ module.exports = class extends Generator {
     this.destinationPath('bin/www'),
     { name: this.props.name }
   );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/default.json'),
+    this.destinationPath('config/default.json'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/development.json'),
+    this.destinationPath('config/development.json'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/production.json'),
+    this.destinationPath('config/production.json'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/staging.json'),
+    this.destinationPath('config/staging.json'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/test.json'),
+    this.destinationPath('config/test.json'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/db.js'),
+    this.destinationPath('mongo_models/db.js'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/authentication.js'),
+    this.destinationPath('helpers/authentication.js'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/index.js'),
+    this.destinationPath('models/index.js'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/readme.md'),
+    this.destinationPath('readme.md'),
+    { name: this.props.name }
+  );
+
   this.fs.copy(
       this.templatePath(),
       this.destinationPath()
