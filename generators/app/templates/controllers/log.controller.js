@@ -2,6 +2,7 @@ var _ = require("underscore");
 var Q = require('q');
 var async = require('async');
 var moment = require('moment');
+var hub = require('hub');
 
 var models  = require('../models');
 var express = require('express');

@@ -80,6 +80,11 @@ module.exports = class extends Generator {
     this.destinationPath('readme.md'),
     { name: this.props.name }
   );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/app.js'),
+    this.destinationPath('app.js'),
+    { name: this.props.name }
+  );
 
   this.fs.copy(
       this.templatePath(),

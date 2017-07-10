@@ -11,6 +11,11 @@
         "port": "3306"
       }
     },
+    "rabbit":{
+      "url" : "128.199.135.38",
+      "user" : "test",
+      "password": "test"
+    },
     "https":{
       "active" : false,
       "cert" : "./config/cloudflare/file.crt",
