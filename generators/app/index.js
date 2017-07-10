@@ -28,7 +28,7 @@ module.exports = class extends Generator {
   this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath('package.json'),
-      { title: this.props.name }
+      { name: this.props.name }
   );
   this.fs.copy(
       this.templatePath(),
