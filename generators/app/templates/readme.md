@@ -1,4 +1,12 @@
 ====
+Project Name:
+Things to Change:
+- package.json (package name)
+- config.json and all the config file types (package name)
+- mongo_models/db.js (db name)
+- bin/www (package name)
+
+====
 Skelton Express Stub for API Development
 As per wiki: A method stub or simply stub in software development is a piece of code used to stand in for some other programming functionality. A stub may simulate the behavior of existing code or be a temporary substitute for yet-to-be-developed code.
 
