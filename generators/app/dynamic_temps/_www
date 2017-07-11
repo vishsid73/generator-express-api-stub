@@ -11,7 +11,7 @@ var https = require('https');
 var fs = require('fs');
 var config    = require('config');
 var models = require("../models");
-var rabbit = config.get('<%= name %>.rabbit');
+var rabbit = config.get('rabbit');
 var hub = require('hub');
 
 var dbconfig = config.get('<%= name %>.dbConfig');

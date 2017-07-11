@@ -2,9 +2,11 @@
  * The Index of Routes
  */
 
+var hello_rctrl = require('./route_controllers/hello.rc');
+
+
 module.exports = function (app) {
 
-  // The signup route
-  app.use('/api/v1', require('./routes/apiv1'));
+  app.get('/', hello_rctrl.hello);
 
 }
