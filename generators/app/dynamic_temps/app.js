@@ -6,11 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var jwt    = require('jsonwebtoken');
 var multer    = require('multer');
-var log_dao = require('./dao/log.dao');
+var config    = require('config');
 
-var rabbit = config.get('<%= name %>.rabbit');
-var hub = require('hub');
-hub.rCon = require('amqplib').connect('amqp://' + rabbit.user + ':' + rabbit.password + '@' + rabbit.url);;
+var log_dao = require('./dao/log.dao');
 
 var app = express();
 app.use(function(req, res, next) {
