@@ -10,18 +10,26 @@ var uuidv4 = require('uuid/v4');
 var rabbit = config.get('rabbit');
 var hub = require('hub');
 var exchange = config.get('rabbit.exchange');
-var wm1;
-if(!hub.map){
-    hub.map = new WeakMap();
-    wm1 = hub.map;
-}
-else{
-    wm1 = hub.map;
-}
+var response_map = require('../../../constants/response_map');
+var amqp_helper = require('../../../helpers/amqp.helper');
+
 
 module.exports = {
     hello: function(req, res, next){
         res.json ('Hello!, Welcome to Skeleton API V2.');
+    },
+    getLogs: function(req, res, next){
+      var res_id = uuidv4();
+      response_map.setMap(res_id,res);
+      var msg = {
+        key : 'fetch_log',
+        res_id: res_id,
+        data :{
+          'name' : 'Pranav Anand',
+          'phone_no' : '9407068021'
+        }
+      };
+      return amqp_helper.publish(msg.key,new Buffer(JSON.stringify(msg)));
     },
 
 

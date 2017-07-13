@@ -7,9 +7,14 @@ var bodyParser = require('body-parser');
 var jwt    = require('jsonwebtoken');
 var multer    = require('multer');
 var config    = require('config');
-
+var events = require("events");
+var emitter = new events.EventEmitter();
+var hub = require('hub');
+hub.emitter = emitter;
+var workers = require('./workers');
 var log_dao = require('./dao/log.dao');
 
+//app
 var app = express();
 app.use(function(req, res, next) {
     var log = {

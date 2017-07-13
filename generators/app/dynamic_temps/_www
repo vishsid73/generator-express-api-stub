@@ -13,6 +13,7 @@ var config    = require('config');
 var models = require("../models");
 var rabbit = config.get('rabbit');
 var hub = require('hub');
+var emitter = hub.emitter;
 
 var dbconfig = config.get('<%= name %>.dbConfig');
 var sslConfig = config.get('<%= name %>.https');
@@ -67,6 +68,9 @@ if(dbconfig.mysql.active == true){
         server.listen(port);
         server.on('error', onError);
         server.on('listening', onListening);
+        console.log('going to emit');
+        console.log(emitter.listeners('server_started'));
+        emitter.emit('server_started');
       });
   });
 
@@ -78,6 +82,9 @@ else{
     server.listen(port);
     server.on('error', onError);
     server.on('listening', onListening);
+    console.log('going to emit');
+    console.log(emitter.listeners('server_started'));
+    emitter.emit('server_started');
   });
 }
 
