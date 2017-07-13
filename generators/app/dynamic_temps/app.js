@@ -38,7 +38,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-var router = require('./router')(app);
+var router = require('./router/<%= name %>')(app);
 app.use('/apidoc', express.static(path.join(__dirname, '../apidocs')));
 console.log("url for api docs: https://host:port/apidoc eg. https://localhost:port/apidoc");
 
