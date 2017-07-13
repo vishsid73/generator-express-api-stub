@@ -90,7 +90,16 @@ module.exports = class extends Generator {
     this.destinationPath('.gitignore'),
     { name: this.props.name }
   );
-
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/router/index.js'),
+    this.destinationPath('router/'+this.props.name + '/index.js'),
+    { name: this.props.name }
+  );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/router/route_controllers/'),
+    this.destinationPath('router/'+this.props.name + '/route_controllers/'),
+    { name: this.props.name }
+  );
 
   this.fs.copy(
       this.templatePath(),
