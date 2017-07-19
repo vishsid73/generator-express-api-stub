@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
         apidoc: {
             <%= name %>: {
-                src: "/",
+                src: ["router/", "controllers/", "dao/", "helpers/", "listeners/"],
                 dest: "./apidocs/"
             }
         },
