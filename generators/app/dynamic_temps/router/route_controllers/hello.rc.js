@@ -18,6 +18,23 @@ module.exports = {
     hello: function(req, res, next){
         res.json ('Hello!, Welcome to Skeleton API V2.');
     },
+     /**
+     * @api {get} /logs Get All Logs
+     * @apiName getAllLogs
+     * @apiGroup End Points
+     * @apiVersion 0.0.1
+     *
+     *
+     *
+     * @apiSuccess {String} Status Success.
+     *
+     * @apiSuccessExample Success-Response: 200 Ok
+     *     HTTP/1.1 200 Ok
+     *     {
+     *       "status": "success"
+     *     }
+     *
+     */
     getLogs: function(req, res, next){
       var res_id = uuidv4();
       response_map.setMap(res_id,res);

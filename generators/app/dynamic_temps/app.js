@@ -11,7 +11,7 @@ var events = require("events");
 var emitter = new events.EventEmitter();
 var hub = require('hub');
 hub.emitter = emitter;
-var workers = require('./workers');
+var workers = require('./listeners');
 var log_dao = require('./dao/log.dao');
 
 //app

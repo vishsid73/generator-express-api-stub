@@ -100,6 +100,11 @@ module.exports = class extends Generator {
     this.destinationPath('router/'+this.props.name + '/route_controllers/'),
     { name: this.props.name }
   );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/apidoc.sh'),
+    this.destinationPath('apidoc.sh'),
+    { name: this.props.name }
+  );
 
   this.fs.copy(
       this.templatePath(),

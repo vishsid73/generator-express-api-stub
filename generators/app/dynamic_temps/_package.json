@@ -3,9 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "apidoc": {
-    "title": "Sample API Doc",
-    "url": "/api",
-    "sampleUrl": "https://localhost:3000/api"
+    "title": "Trip In API Doc",
+    "url": ""
   },
   "scripts": {
     "start": "NODE_ENV=production nodemon --harmony ./bin/www",

@@ -11,9 +11,9 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         apidoc: {
-            LexStart: {
-                src: "controllers/",
-                dest: "apidocs/"
+            <%= name %>: {
+                src: "/",
+                dest: "./apidocs/"
             }
         },
         pkg: grunt.file.readJSON('package.json'),
