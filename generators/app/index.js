@@ -110,6 +110,11 @@ module.exports = class extends Generator {
     this.destinationPath('Gruntfile.js'),
     { name: this.props.name }
   );
+  this.fs.copyTpl(
+    this.templatePath('../dynamic_temps/response.controller.js'),
+    this.destinationPath('controllers/response.controller.js'),
+    { name: this.props.name }
+  );
 
   this.fs.copy(
       this.templatePath(),

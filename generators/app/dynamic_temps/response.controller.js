@@ -20,9 +20,11 @@ var log_dao = require('../dao/log.dao');
 module.exports = {
     sendResponse: function(msg, channel){
         var message = JSON.parse(msg.content);
-        channel.ack(msg);
-        var res = response_map.getMap(message.res_id);
-        response_map.deleteMap(message.res_id);
-        return res.json(message.data);
+        if(message.tag == '<%= name %>'){
+            channel.ack(msg);
+            var res = response_map.getMap(message.res_id);
+            response_map.deleteMap(message.res_id);
+            return res.json(message.data);
+        }
     },
 };
